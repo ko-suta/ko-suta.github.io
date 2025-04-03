@@ -34,6 +34,7 @@
   - [[#dashboard][Dashboard]]
 - [[#interaction][Interaction]]
   - [[#tweaking-default-behavior][Tweaking default behavior]]
+  - [[#others][Others]]
   - [[#terminal-emulator][Terminal emulator]]
   - [[#spelling][Spelling]]
   - [[#auto-complete-mode][Auto-complete mode]]
@@ -64,7 +65,7 @@
 - [[#latex][LaTeX]]
   - [[#auctex-setup][Auctex setup]]
   - [[#reftex][RefTeX]]
-  - [[#others][Others]]
+  - [[#others-1][Others]]
 -  [[#emacs-mail][Emacs Mail]]
   - [[#basic-config][Basic config]]
   - [[#sending-email][Sending email]]
@@ -675,6 +676,18 @@ Use [[https://elpa.gnu.org/packages/adaptive-wrap.html][adaptive-wrap]] to visua
 
    (setq history-length 25)        ;; Only save the last 25 minibuffer prompts
    (setq global-auto-revert-non-file-buffers t) ;; Revert Dired and other buffers
+
+#+end_src
+
+
+** Others
+
+#+begin_src emacs-lisp
+
+  (use-package yaml-mode
+    :ensure t)
+
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 #+end_src
 
