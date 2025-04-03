@@ -2379,6 +2379,13 @@ Modifying the display template to show the node “type”
 #+end_src
 
 
+#+begin_src emacs-lisp
+
+  (use-package ox-tufte
+    :ensure t)
+
+#+end_src
+
 * LaTeX
 
 ** Auctex setup

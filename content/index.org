@@ -1,4 +1,6 @@
 #+title: Org Mode Example Site
+#+HTML_HEAD: <link rel="stylesheet" href="./tufte.css" type="text/css" />
+#+HTML_HEAD: <link rel="stylesheet" href="./ox-tufte.css" type="text/css" />
 
 * Overview
 
@@ -7,3 +9,7 @@ This is an *example* of a _website_ written with [[https://orgmode.org][Org Mode
 Here is a link to my [[./init.org][Emacs configuration]].
 
 * Next section
+
+- one
+- two
+- three
