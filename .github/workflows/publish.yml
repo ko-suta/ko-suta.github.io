@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+        with:
+          lfs:true
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Install Emacs
         run: sudo apt install emacs-nox --yes
