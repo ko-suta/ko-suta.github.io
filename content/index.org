@@ -1,6 +1,5 @@
 #+title: Org Mode Example Site
-#+HTML_HEAD: <link rel="stylesheet" href="./tufte.css" type="text/css" />
-#+HTML_HEAD: <link rel="stylesheet" href="./ox-tufte.css" type="text/css" />
+
 
 * Overview
 
