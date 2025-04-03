@@ -9,7 +9,6 @@
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			 ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 
 ;; Initialize the package system
@@ -17,27 +16,26 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-;; Require built-in dependencies
-(require 'ox-publish)
-
 ;; Install dependencies
 (package-install 'htmlize)
+
+;; Load the publishing system
+(require 'ox-publish)
 
 ;; Customize the HTML output
 (setq org-html-validation-link nil            ;; Don't show validation link
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
-      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />"
-
+      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
 ;; Define the publishing project
 (setq org-publish-project-alist
       (list
-       (list "Website"
+       (list "website:main"
              :recursive t
              :base-directory "./content"
+             :publishing-function 'org-html-publish-to-html
              :publishing-directory "./public"
-	     :publishing-function 'org-html-publish-to-html
              :with-author nil           ;; Don't include author name
              :with-creator t            ;; Include Emacs and Org versions in footer
              :with-toc t                ;; Include a table of contents
