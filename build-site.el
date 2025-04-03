@@ -17,18 +17,11 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-;; Install use-package
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
-(require 'use-package)
-
 ;; Require built-in dependencies
 (require 'ox-publish)
 
-;; Install other dependencies
-(use-package htmlize
-  :ensure t)
-
+;; Install dependencies
+(package-install 'htmlize)
 
 ;; Customize the HTML output
 (setq org-html-validation-link nil            ;; Don't show validation link
