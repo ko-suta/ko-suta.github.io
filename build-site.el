@@ -27,8 +27,7 @@
 (setq org-html-validation-link nil            ;; Don't show validation link
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
-      org-html-head "<link rel=\"stylesheet\" href=\"./tufte.css" type="text/css\" />"
-      org-html-head-extra "<link rel=\"stylesheet\" href=\"./ox-tufte.css" type="text/css\" />")
+      org-html-head "<link rel=\"stylesheet\" href=\"https://github.com/edwardtufte/tufte-css/blob/c0a7db6a5de4e089b7234d0b93569f9ed71e0f46/tufte.css\" />"
 
 
 ;; Define the publishing project
