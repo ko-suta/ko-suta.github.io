@@ -18,6 +18,7 @@
 
 ;; Install dependencies
 (package-install 'htmlize)
+(package-install 'ox-tufte)
 
 ;; Load the publishing system
 (require 'ox-publish)
