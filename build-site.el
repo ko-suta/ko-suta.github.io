@@ -9,6 +9,7 @@
 (require 'package)
 (setq package-user-dir (expand-file-name "./.packages"))
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 
 ;; Initialize the package system
@@ -16,19 +17,24 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-;; Install dependencies
-(package-install 'htmlize)
-(package-install 'ox-tufte)
+;; Install use-package
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(require 'use-package)
 
-;; Load the publishing system
+;; Require built-in dependencies
 (require 'ox-publish)
-(require 'ox-tufte)
+
+;; Install other dependencies
+(use-package htmlize
+  :ensure t)
+
 
 ;; Customize the HTML output
 (setq org-html-validation-link nil            ;; Don't show validation link
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
-      org-html-head "<link rel=\"stylesheet\" href=\"https://github.com/edwardtufte/tufte-css/blob/c0a7db6a5de4e089b7234d0b93569f9ed71e0f46/tufte.css\" />"
+      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />"
 
 
 ;; Define the publishing project
