@@ -25,11 +25,17 @@
 (use-package htmlize
   :ensure t)
 
+(use-package ox-tufte
+  :ensure t)
+
 ;; Customize the HTML output
 (setq org-html-validation-link nil            ;; Don't show validation link
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
-      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />"
+      ;; org-html-head "<link rel=\"stylesheet\" href=\"./content/tufte.css\" />"
+      ;; org-html-head-extra "<link rel=\"stylesheet\" href=\"./content/ox-tufte.css\" />"
+      )
 
 ;; Define the publishing project
 (setq org-publish-project-alist
