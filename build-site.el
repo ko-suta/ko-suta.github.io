@@ -16,11 +16,14 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-;; Install dependencies
-(package-install 'htmlize)
-
-;; Load the publishing system
+;; Install use-package
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(require 'use-package)
 (require 'ox-publish)
+
+(use-package htmlize
+  :ensure t)
 
 ;; Customize the HTML output
 (setq org-html-validation-link nil            ;; Don't show validation link
