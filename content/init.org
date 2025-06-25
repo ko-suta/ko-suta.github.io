@@ -2258,7 +2258,7 @@ Streamlined custom capture for tasks and notes
                        :templates '(("i" "inbox" plain "* %?"
                                      :if-new (file+head "Inbox.org" "#+title: Inbox\n")))))
 
-  (global-set-key (kbd "C-c n b") #'my/org-roam-capture-inbox)
+  (global-set-key (kbd "C-c i b") #'my/org-roam-capture-inbox)
 
 #+end_src
 

@@ -31,8 +31,8 @@
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
       org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />"
-      org-html-head "<link rel=\"stylesheet\" href=\"./content/tufte.css\" />"
-      org-html-head-extra "<link rel=\"stylesheet\" href=\"./content/ox-tufte.css\" />"
+      ;; org-html-head "<link rel=\"stylesheet\" href=\"./content/tufte.css\" />"
+      ;; org-html-head-extra "<link rel=\"stylesheet\" href=\"./content/ox-tufte.css\" />"
       )
 
 ;; Define the publishing project
