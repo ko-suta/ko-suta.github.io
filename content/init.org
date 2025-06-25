@@ -2395,13 +2395,6 @@ Modifying the display template to show the node “type”
   (require 'auctex-latexmk)
   (auctex-latexmk-setup)
 
-  ;; added the following code after =auctex= update (to enable auctex-latexmk)
-  ;; source: https://www.reddit.com/r/emacs/comments/vl38v0/setting_auxtex_to_run_latexmk/
-  ;; (eval-after-load "tex"
-  ;;   '(add-to-list 'TeX-command-list
-  ;;                 '("LaTeXmk" "latexmk %s" TeX-run-command t t :help "Run LaTeXmk")
-  ;;                 t))
-
   (setq-default TeX-master nil)
   (setq TeX-view-program-selection '((output-pdf "Evince")))
   (setq TeX-save-query nil)
